@@ -102,6 +102,28 @@ h1 {
   font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
+.hero-gif {
+  position: absolute;
+  right: 2rem;
+  top: 0.6rem;
+  width: clamp(220px, 32vw, 520px);
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  z-index: 0;
+  pointer-events: none;
+  transform: rotate(215deg);
+  opacity: 0.28;
+  filter: blur(0.6px) saturate(1.1);
+}
+
+.hero-gif img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 32px rgba(5, 9, 14, 0.45));
+}
+
 h2 {
   font-family: "Fraunces", serif;
   font-weight: 500;
@@ -391,16 +413,37 @@ h1, h2, .highlight, strong {
 .cta {
   text-decoration: none;
   color: var(--text);
-  padding: 0.75rem 1.4rem;
+  padding: 0.9rem 1.6rem;
   border-radius: 999px;
   border: 1px solid rgba(125, 199, 255, 0.4);
-  background: rgba(17, 24, 36, 0.6);
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  background: linear-gradient(140deg, rgba(17, 24, 36, 0.7), rgba(22, 34, 52, 0.75));
+  box-shadow: 0 10px 24px rgba(5, 9, 14, 0.35), inset 0 0 0 1px rgba(242, 200, 121, 0.08);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  letter-spacing: 0.02em;
 }
 
 .cta-small {
-  padding: 0.4rem 0.9rem;
-  font-size: 0.9rem;
+  padding: 0.6rem 1.15rem;
+  font-size: 1rem;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem 1.1rem;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+.cta-grid .cta {
+  width: 100%;
+  text-align: center;
+}
+
+.cta-grid .cta-center {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 460px;
 }
 
 .test-title {
@@ -412,6 +455,8 @@ h1, h2, .highlight, strong {
 .cta:hover {
   transform: translateY(-2px);
   border-color: rgba(242, 200, 121, 0.7);
+  box-shadow: 0 14px 32px rgba(5, 9, 14, 0.45), inset 0 0 0 1px rgba(242, 200, 121, 0.2);
+  background: linear-gradient(140deg, rgba(20, 32, 50, 0.85), rgba(30, 44, 66, 0.9));
 }
 
 footer {
@@ -495,6 +540,11 @@ footer {
   .video-sidebar {
     display: none;
   }
+  .hero-gif {
+    position: static;
+    margin: 1.2rem auto 0;
+    transform: rotate(0deg);
+  }
 }
 </style>
 </head>
@@ -527,305 +577,324 @@ footer {
     <h1>TIDE</h1>
     <span class="framework">Framework</span>
   </div>
+  <div class="hero-gif" aria-hidden="true">
+    <img src="relajado_non-relajado.png" alt="">
+  </div>
   <p class="tagline">
-    Geometría de no‑relajación dentro del marco de Einstein y ΛCDM.
+    Geometría de no-relajación en Relatividad General.
   </p>
 
   <p class="hero-lead">
-    TIDE propone que los
-    fenómenos atribuidos al sector oscuro emergen como una <span class="highlight">respuesta geométrica efectiva</span>
-    cuando <span class="highlight">el espacio-tiempo no se encuentra completamente relajado</span>; TIDE emerge cuando la geometría no ha regresado aún al régimen de Levi-Civita.  
-  </p>
+    TIDE muestra que los fenómenos atribuidos al sector oscuro pueden emerger como una
+    <span class="highlight">respuesta geométrica efectiva</span> cuando
+    <span class="highlight">la conexión del espacio-tiempo no relaja instantáneamente a Levi-Civita</span>,
+    dando lugar a una torsión efectiva estabilizada, sin introducir nuevos campos ni grados de libertad.
+  </p><br>
   <p class="stat">
     <span class="mechanism">Aclaración:</span> TIDE no es una alternativa a ΛCDM, sino un mecanismo geométrico que puede explicar por qué ΛCDM funciona fenomenológicamente en el universo tardío.
   </p>
- 
+
+  <section>
+    <div class="accordion-grid">
+      <details class="accordion" id="regimen-validez">
+        <summary><h2>Régimen de Validez</h2></summary>
+        <div class="grid">
+
+      <div class="card">
+        <strong>Universo joven (CMB/BBN)</strong>
+        <p>
+          En el universo temprano la geometría se encuentra completamente relajada
+          (<span class="highlight">INR → 0</span>). En este régimen, TIDE recupera
+          exactamente la Relatividad General.
+        </p>
+        <p class="stat">
+          Consecuencia: el CMB, la nucleosíntesis primordial y la cosmología temprana
+          permanecen intactos.
+        </p>
+      </div>
+
+      <div class="card">
+        <strong>Vacíos cósmicos</strong>
+        <p>
+          En regiones de baja densidad y baja complejidad dinámica, la historia geométrica
+          es trivial y no se acumula memoria de no-relajación.
+        </p>
+        <p class="stat">
+          Resultado: <span class="highlight">torsión efectiva nula</span>. La gravedad es
+          puramente Einsteiniana.
+        </p>
+      </div>
+
+      <div class="card">
+        <strong>Estructuras virializadas</strong>
+        <p>
+          En galaxias, cúmulos y sistemas con historia dinámica compleja, la geometría
+          no relaja instantáneamente. El escalar de no-relajación satisface
+          <span class="highlight">INR &gt; 0</span>.
+        </p>
+        <p class="stat">
+          Efecto observable: emerge una <span class="highlight">torsión efectiva</span>
+          y aparece un exceso gravitatorio aparente sin introducir nuevos grados de libertad.
+        </p>
+      </div>
+
+        </div>
+      </details>
+      <details class="accordion" id="mecanismo-geometrico">
+        <summary><h2>Mecanismo Geométrico</h2></summary>
+        <div class="grid">
+      <div class="card">
+        <strong>Regla de activación</strong>
+        <p>
+          La torsión efectiva aparece cuando la conexión
+          no relaja instantáneamente a Levi-Civita, <span class="highlight">INR &gt; 0</span>.
+        </p>
+        <p class="tight">
+          En entornos relajados, <span class="highlight">INR → 0</span> y GR es exacta.
+        </p>
+      </div>
+      <div class="card">
+        <strong>Ecuación de relajación</strong>
+        <p>
+          Dinámica tipo Maxwell para la distorsión de la conexión:
+          <span class="highlight">DΔΓ/Dτ + (1/τ)ΔΓ = S</span>,
+          donde S representa fuentes dinámicas (shear, tidal stress, fusiones).
+        </p>
+      </div>
+      <div class="card">
+        <strong>Predicción cualitativa</strong>
+        <p>
+          El exceso gravitatorio aparente correlaciona con historia dinámica acumulada,
+          no únicamente con masa o densidad instantánea.
+        </p>
+      </div>
+        </div>
+      </details>
+      <details class="accordion" id="evidencia">
+        <summary><h2>Evidencia Observacional</h2></summary>
+        <p>
+          TIDE se confronta con observables independientes y ya disponibles. Los siguientes
+          tests enlazan directamente a los papers donde se presentan los datos, figuras y
+          procedimientos completos.
+        </p>
+
+        <ul class="list prediction-list">
+
+          <li>
+            <span class="prediction-title">Lentes gravitacionales: evolución del exceso gravitatorio</span><br><br>
+            Observable principal:
+            <em>R(z) ≡ M<sub>Einstein</sub> / M<sub>*</sub></em> en una compilación homogenizada de
+            211 lentes fuertes (SLACS, BELLS, SL2S, HSC).
+            Se detecta una evolución monótona con redshift:
+            5.2σ (unbinned) y 3.1σ (binned conservador), con tests LOSO, bootstrap y permutación.
+            <br><br>
+            <span class="muted">Paper:</span> <em>TIDE IV</em><br>
+            Secciones 2–4 · Fig. 1 (p. 3), Figs. 2–3 (pp. 4–5)
+            <br><br>
+            <a class="cta" href="evidencia_tide_iv.html" target="_blank" rel="noopener">
+              Ver test
+            </a><br><br>
+          </li>
+
+          <li>
+            <span class="prediction-title">Cúmulos de galaxias: fracción bariónica vs masa</span><br><br>
+            Test independiente en N = 200 cúmulos.
+            La fracción bariónica <em>f<sub>b</sub></em> muestra una dependencia puramente
+            ambiental (masa / virialización), sin tendencia residual con redshift a masa fija.
+            El porcentaje bariónico recupera el valor cosmológico cuando se incluye la
+            contribución geométrica efectiva.
+            <br><br>
+            <span class="muted">Paper:</span> <em>TIDE II</em><br>
+            Sección 5 · Fig. 1 (p. 9), Tabla 1 (p. 10), Fig. 2 (robustez)
+            <br><br>
+            <a class="cta" href="evidencia_tide_ii.html" target="_blank" rel="noopener">
+              Ver test
+            </a><br><br>
+          </li>
+
+          <li>
+            <span class="prediction-title">Tensión de Hubble: gradiente ambiental en H<sub>0</sub></span><br><br>
+            La discrepancia entre H<sub>0</sub> local y temprano emerge como un
+            efecto geométrico ambiental asociado a la propagación de la luz a través
+            de regiones virializadas. Se predice y recupera
+            ΔH<sub>0</sub> ≃ 2 km s<sup>−1</sup> Mpc<sup>−1</sup>,
+            sin modificar la física temprana.
+            <br><br>
+            <span class="muted">Paper:</span> <em>TIDE III</em><br>
+            Secciones 5–6 · Figs. 4–5
+            <br><br>
+            <a class="cta" href="evidencia_tide_iii.html" target="_blank" rel="noopener">
+              Ver test
+            </a><br><br>
+          </li>
+
+          <li>
+            <span class="prediction-title">Bullet Cluster: offset gas–potencial</span><br><br>
+            En un sistema extremo y no relajado, el pico de lente gravitacional
+            permanece desplazado respecto del gas bariónico.
+            En TIDE, el offset surge como memoria geométrica en un régimen
+            de fuerte no-relajación.
+            <br><br>
+            <span class="muted">Paper:</span> <em>TIDE V</em><br>
+            Sección 5 · Fig. 1 (p. 12)
+            <br><br>
+            <a class="cta" href="evidencia_tide_v.html" target="_blank" rel="noopener">
+              Ver test
+            </a><br><br>
+          </li>
+
+          <li>
+            <span class="prediction-title">DESI: expansión no uniforme y jerarquía ambiental</span><br><br>
+            Usando ~50.000 galaxias de DESI, se detecta una jerarquía monótona en
+            el residual de expansión ΔH desde voids → sheets → filaments → knots.
+            El efecto aparece en campos dinámicos (ΔH, dv/dr) y no en el potencial estático ϕ,
+            con p ≪ 10<sup>−50</sup>.
+            <br><br>
+            <span class="muted">Paper:</span> <em>TIDE VI</em><br>
+            Secciones 3–6 · Fig. 1 (p. 2), Figs. 3–6 (pp. 13–17)
+            <br><br>
+            <a class="cta" href="evidencia_tide_vi.html" target="_blank" rel="noopener">
+              Ver test
+            </a><br><br>
+          </li>
+
+        </ul>
+
+        <p class="stat">
+          En conjunto, estos observables delimitan un régimen geométrico efectivo
+          que preserva la cosmología temprana estándar y explica las anomalías tardías
+          sin introducir nuevos campos ni partículas.
+        </p>
+      </details>
+      <details class="accordion" id="predicciones">
+        <summary><h2>Predicciones Falsables</h2></summary>
+        <p>
+          El marco TIDE no se limita a reproducir anomalías existentes. Produce predicciones
+          observacionales concretas que pueden ser confirmadas o refutadas con datos
+          próximos, sin modificar la cosmología temprana estándar.
+        </p>
+
+        <ul class="list prediction-list">
+
+          <li>
+            <span class="prediction-title">Saturación del exceso gravitatorio en galaxias tempranas no virializadas</span><br><br>
+            <strong>Predicción:</strong> En galaxias jóvenes, recientemente ensambladas y aún no
+            virializadas, el exceso gravitatorio aparente debe ser reducido o ausente, incluso
+            a redshift alto, independientemente de la masa bariónica.
+            <br><br>
+            <strong>Falsación:</strong> La detección sistemática de halos “maduros” con exceso
+            gravitatorio pleno en galaxias tempranas no relajadas refutaría el mecanismo.
+            <br><br>
+            <strong>Misión:</strong> JWST (morfologías + masas), Roman Space Telescope
+            (lensing temprano), Euclid (estructura a z ≳ 1).<br><br>
+          </li>
+
+          <li>
+            <span class="prediction-title">Lensing dependiente de historia dinámica, no solo de potencial</span><br><br>
+            <strong>Predicción:</strong> A masa y redshift fijos, el efecto de lente debe correlacionar
+            con indicadores de complejidad dinámica (fusiones, shear ambiental, ensamblaje),
+            no únicamente con la profundidad del potencial gravitatorio.
+            <br><br>
+            <strong>Falsación:</strong> La ausencia de correlación entre señal de lente y proxies
+            dinámicos, una vez controlada la masa, descartaría TIDE.
+            <br><br>
+            <strong>Misión:</strong> Euclid (lensing débil + ambientes), Rubin/LSST
+            (historia de ensamblaje), DESI (contexto dinámico).<br><br>
+          </li>
+
+          <li>
+            <span class="prediction-title">Supresión del efecto tipo “materia oscura” en vacíos cósmicos</span><br><br>
+            <strong>Predicción:</strong> En vacíos y entornos de baja densidad dinámica,
+            la geometría debe estar completamente relajada y la inferencia gravitatoria
+            coincidir con la masa bariónica observada.
+            <br><br>
+            <strong>Falsación:</strong> La detección robusta de exceso gravitatorio en vacíos,
+            no asociado a historia dinámica previa, refutaría el modelo.
+            <br><br>
+            <strong>Misión:</strong> DESI (clasificación ambiental), Euclid (lensing en vacíos),
+            Rubin/LSST (dinámica de galaxias aisladas).<br><br>
+          </li>
+
+          <li>
+            <span class="prediction-title">Gradientes ambientales en medidas locales de expansión</span><br><br>
+            <strong>Predicción:</strong> Las estimaciones locales de expansión deben mostrar
+            residuales correlacionados con ambiente dinámico (voids → filaments → knots),
+            aun a redshift fijo, sin afectar el valor global inferido del CMB.
+            <br><br>
+            <strong>Falsación:</strong> La desaparición del gradiente ambiental con datos
+            cinemáticos independientes invalidaría la interpretación geométrica.
+            <br><br>
+            <strong>Misión:</strong> DESI (reconstrucciones cinemáticas), SKA
+            (peculiar velocities), Roman (distancias estándar).
+            <br><br>
+          </li>
+
+        </ul>
+
+        <p class="stat">
+          Estas predicciones delimitan un régimen observacional claro: si los próximos
+          surveys no confirman dependencias dinámicas y ambientales, TIDE queda falsado.
+        </p>
+      </details>
+    </div>
+  </section>
 
   <div class="hero-card">
-    <p class="highlight hero-title"><span class="mechanism">Marco Einstein–Cartan:</span></p>
+    <p class="highlight hero-title"><span class="mechanism">Marco Einstein–Cartan (ECSK)</span></p>
     <p>
-      <span class="mechanism">La torsión</span> no es un campo propagante nuevo: es la huella algebraica de una geometría
-      que conserva memoria dinámica (INR) tras procesos de ensamblaje y relajación incompleta.
-      TIDE mantiene la cosmología temprana estándar y recupera GR en el límite de equilibrio.
+      TIDE se formula dentro de Einstein–Cartan–Sciama–Kibble (ECSK). En ECSK la torsión no es un
+      campo propagante ni introduce nuevos grados de libertad: es una variable algebraica de la
+      conexión que se apaga en ausencia de activación efectiva. TIDE añade una única hipótesis
+      física macroscópica: tras el coarse-graining, la conexión puede no relajar instantáneamente
+      a Levi-Civita en procesos no lineales (ensamblaje, mergers, flujos complejos). Esa relajación
+      incompleta deja una memoria geométrica cuantificada por un escalar de no-relajación
+      <span class="highlight">INR</span>, y GR se recupera exactamente en el límite de equilibrio
+      (<span class="highlight">INR → 0</span>).
     </p>
     <div class="equations" style="margin-top:1.6rem">
-      <strong>Ecuaciones mínimas (forma operativa)</strong>
-      <p class="tight">
-        La idea se puede resumir en un cierre de relajación para la distorsión de la conexión,
-        y en cómo eso se refleja como una contribución efectiva en la inferencia gravitatoria.
-      </p>
-
+      <strong>Cierre de relajación (tipo Maxwell)</strong>
       <pre style="white-space:pre-wrap;background:transparent;border:1px solid rgba(125,199,255,.15);
 padding:1rem;border-radius:12px;line-height:1.5;color:#dfe9f6;overflow:auto;">
-(1) Relajación geométrica (tipo Maxwell):
-    D(ΔΓ)/dλ + (1/τ) ΔΓ = S
-
-(2) Límite cuasi-Newtoniano (inferencia efectiva):
-    ∇·g_eff = 4πG (ρ_b + ρ_τ),    con   ρ_τ = ρ_b Ξ(INR)
-
-(3) Residual de expansión (forma lineal usada en tests de ordenamiento):
-    ΔH/H0 ≃ γ ⟨INR⟩
+D(ΔΓ)/dλ + (1/τ) ΔΓ = S
       </pre>
-
-      
+      <p class="tight">
+        ΔΓ no representa un nuevo campo: es una variable auxiliar de cierre constitutivo (retraso
+        geométrico de la conexión respecto del equilibrio). τ es un tiempo efectivo de relajación
+        emergente del coarse-graining; si el driving cesa, ΔΓ decae y se recupera GR.
+      </p>
+      <strong>Límite cuasi-Newtoniano (inferencia efectiva)</strong>
+      <pre style="white-space:pre-wrap;background:transparent;border:1px solid rgba(125,199,255,.15);
+padding:1rem;border-radius:12px;line-height:1.5;color:#dfe9f6;overflow:auto;">
+∇·g_eff = 4πG (ρ_b + ρ_τ),    ρ_τ = ρ_b Ξ(INR)
+      </pre>
+      <p class="tight">
+        ρ_τ no es una nueva densidad física ni una fuente independiente: es un término geométrico
+        efectivo que modifica la inferencia gravitatoria en entornos no relajados y se anula cuando
+        Ξ → 0.
+      </p>
+      <strong>Residual de expansión (forma lineal usada en tests)</strong>
+      <pre style="white-space:pre-wrap;background:transparent;border:1px solid rgba(125,199,255,.15);
+padding:1rem;border-radius:12px;line-height:1.5;color:#dfe9f6;overflow:auto;">
+ΔH/H0 ≃ γ ⟨INR⟩
+      </pre>
+      <p class="tight">
+        donde γ es un coeficiente efectivo de primer orden (no un parámetro cosmológico libre).
+        Esta tríada resume el mecanismo: torsión efectiva ambiental como memoria geométrica,
+        cosmología temprana estándar y recuperación exacta de GR en equilibrio.
+      </p>
     </div>
-    <p class="stat"><span class="mechanism">Mecanismo:</span> puede pensarse en un colchón viscoelástico. Al aplicar una carga y retirarla, la geometría del material no vuelve instantáneamente a su estado original: persiste una deformación residual que decae en el tiempo. Durante ese intervalo, la geometría residual permite inferir una “masa aparente”, aun cuando la fuente real ya no está presente.</p>
   </div>
 </header>
 <div class="figure-wrap">
   <div class="figure-card">
-    <img src="relajado_non-relajado.png" alt="Régimen relajado vs no relajado">
+    <img src="Video_Project.gif" alt="Video Project">
     <span class="figure-label left">Espacio-tiempo relajado</span>
     <span class="figure-label right">Espacio-tiempo no relajado</span>
   </div>
 </div>
-<section>
-  <div class="accordion-grid">
-    <details class="accordion">
-      <summary><h2>Régimen de Validez</h2></summary>
-      <div class="grid">
-
-    <div class="card">
-      <strong>Universo joven (CMB/BBN)</strong>
-      <p>
-        En el universo temprano la geometría se encuentra completamente relajada
-        (<span class="highlight">INR → 0</span>). En este régimen, TIDE recupera
-        exactamente la Relatividad General.
-      </p>
-      <p class="stat">
-        Consecuencia: el CMB, la nucleosíntesis primordial y la cosmología temprana
-        permanecen intactos.
-      </p>
-    </div>
-
-    <div class="card">
-      <strong>Vacíos cósmicos</strong>
-      <p>
-        En regiones de baja densidad y baja complejidad dinámica, la historia geométrica
-        es trivial y no se acumula memoria de no-relajación.
-      </p>
-      <p class="stat">
-        Resultado: <span class="highlight">torsión efectiva nula</span>. La gravedad es
-        puramente Einsteiniana.
-      </p>
-    </div>
-
-    <div class="card">
-      <strong>Estructuras virializadas</strong>
-      <p>
-        En galaxias, cúmulos y sistemas con historia dinámica compleja, la geometría
-        no relaja instantáneamente. El escalar de no-relajación satisface
-        <span class="highlight">INR &gt; 0</span>.
-      </p>
-      <p class="stat">
-        Efecto observable: emerge una <span class="highlight">torsión efectiva</span>
-        y aparece un exceso gravitatorio aparente sin introducir nuevos grados de libertad.
-      </p>
-    </div>
-
-      </div>
-    </details>
-    <details class="accordion">
-      <summary><h2>Mecanismo Geométrico</h2></summary>
-      <div class="grid">
-    <div class="card">
-      <strong>Regla de activación</strong>
-      <p>
-        La torsión efectiva aparece cuando la conexión
-        no relaja instantáneamente a Levi-Civita, <span class="highlight">INR &gt; 0</span>.
-      </p>
-      <p class="tight">
-        En entornos relajados, <span class="highlight">INR → 0</span> y GR es exacta.
-      </p>
-    </div>
-    <div class="card">
-      <strong>Ecuación de relajación</strong>
-      <p>
-        Dinámica tipo Maxwell para la distorsión de la conexión:
-        <span class="highlight">DΔΓ/Dτ + (1/τ)ΔΓ = S</span>,
-        donde S representa fuentes dinámicas (shear, tidal stress, fusiones).
-      </p>
-    </div>
-    <div class="card">
-      <strong>Predicción cualitativa</strong>
-      <p>
-        El exceso gravitatorio aparente correlaciona con historia dinámica acumulada,
-        no únicamente con masa o densidad instantánea.
-      </p>
-    </div>
-      </div>
-    </details>
-    <details class="accordion" id="evidencia">
-      <summary><h2>Evidencia observacional</h2></summary>
-      <p>
-        TIDE se confronta con observables independientes y ya disponibles. Los siguientes
-        tests enlazan directamente a los papers donde se presentan los datos, figuras y
-        procedimientos completos.
-      </p>
-
-      <ul class="list prediction-list">
-
-        <li>
-          <span class="prediction-title">Lentes gravitacionales: evolución del exceso gravitatorio</span><br><br>
-          Observable principal:
-          <em>R(z) ≡ M<sub>Einstein</sub> / M<sub>*</sub></em> en una compilación homogenizada de
-          211 lentes fuertes (SLACS, BELLS, SL2S, HSC).
-          Se detecta una evolución monótona con redshift:
-          5.2σ (unbinned) y 3.1σ (binned conservador), con tests LOSO, bootstrap y permutación.
-          <br><br>
-          <span class="muted">Paper:</span> <em>TIDE IV</em><br>
-          Secciones 2–4 · Fig. 1 (p. 3), Figs. 2–3 (pp. 4–5)
-          <br><br>
-          <a class="cta" href="evidencia_tide_iv.html" target="_blank" rel="noopener">
-            Ver test
-          </a><br><br>
-        </li>
-
-        <li>
-          <span class="prediction-title">Cúmulos de galaxias: fracción bariónica vs masa</span><br><br>
-          Test independiente en N = 200 cúmulos.
-          La fracción bariónica <em>f<sub>b</sub></em> muestra una dependencia puramente
-          ambiental (masa / virialización), sin tendencia residual con redshift a masa fija.
-          El porcentaje bariónico recupera el valor cosmológico cuando se incluye la
-          contribución geométrica efectiva.
-          <br><br>
-          <span class="muted">Paper:</span> <em>TIDE II</em><br>
-          Sección 5 · Fig. 1 (p. 9), Tabla 1 (p. 10), Fig. 2 (robustez)
-          <br><br>
-          <a class="cta" href="evidencia_tide_ii.html" target="_blank" rel="noopener">
-            Ver test
-          </a><br><br>
-        </li>
-
-        <li>
-          <span class="prediction-title">Tensión de Hubble: gradiente ambiental en H<sub>0</sub></span><br><br>
-          La discrepancia entre H<sub>0</sub> local y temprano emerge como un
-          efecto geométrico ambiental asociado a la propagación de la luz a través
-          de regiones virializadas. Se predice y recupera
-          ΔH<sub>0</sub> ≃ 2 km s<sup>−1</sup> Mpc<sup>−1</sup>,
-          sin modificar la física temprana.
-          <br><br>
-          <span class="muted">Paper:</span> <em>TIDE III</em><br>
-          Secciones 5–6 · Figs. 4–5
-          <br><br>
-          <a class="cta" href="evidencia_tide_iii.html" target="_blank" rel="noopener">
-            Ver test
-          </a><br><br>
-        </li>
-
-        <li>
-          <span class="prediction-title">Bullet Cluster: offset gas–potencial</span><br><br>
-          En un sistema extremo y no relajado, el pico de lente gravitacional
-          permanece desplazado respecto del gas bariónico.
-          En TIDE, el offset surge como memoria geométrica en un régimen
-          de fuerte no-relajación.
-          <br><br>
-          <span class="muted">Paper:</span> <em>TIDE V</em><br>
-          Sección 5 · Fig. 1 (p. 12)
-          <br><br>
-          <a class="cta" href="evidencia_tide_v.html" target="_blank" rel="noopener">
-            Ver test
-          </a><br><br>
-        </li>
-
-        <li>
-          <span class="prediction-title">DESI: expansión no uniforme y jerarquía ambiental</span><br><br>
-          Usando ~50.000 galaxias de DESI, se detecta una jerarquía monótona en
-          el residual de expansión ΔH desde voids → sheets → filaments → knots.
-          El efecto aparece en campos dinámicos (ΔH, dv/dr) y no en el potencial estático ϕ,
-          con p ≪ 10<sup>−50</sup>.
-          <br><br>
-          <span class="muted">Paper:</span> <em>TIDE VI</em><br>
-          Secciones 3–6 · Fig. 1 (p. 2), Figs. 3–6 (pp. 13–17)
-          <br><br>
-          <a class="cta" href="evidencia_tide_vi.html" target="_blank" rel="noopener">
-            Ver test
-          </a><br><br>
-        </li>
-
-      </ul>
-
-      <p class="stat">
-        En conjunto, estos observables delimitan un régimen geométrico efectivo
-        que preserva la cosmología temprana estándar y explica las anomalías tardías
-        sin introducir nuevos campos ni partículas.
-      </p>
-    </details>
-    <details class="accordion" id="predicciones">
-      <summary><h2>Predicciones falsables</h2></summary>
-      <p>
-        El marco TIDE no se limita a reproducir anomalías existentes. Produce predicciones
-        observacionales concretas que pueden ser confirmadas o refutadas con datos
-        próximos, sin modificar la cosmología temprana estándar.
-      </p>
-
-      <ul class="list prediction-list">
-
-        <li>
-          <span class="prediction-title">Saturación del exceso gravitatorio en galaxias tempranas no virializadas</span><br><br>
-          <strong>Predicción:</strong> En galaxias jóvenes, recientemente ensambladas y aún no
-          virializadas, el exceso gravitatorio aparente debe ser reducido o ausente, incluso
-          a redshift alto, independientemente de la masa bariónica.
-          <br><br>
-          <strong>Falsación:</strong> La detección sistemática de halos “maduros” con exceso
-          gravitatorio pleno en galaxias tempranas no relajadas refutaría el mecanismo.
-          <br><br>
-          <strong>Misión:</strong> JWST (morfologías + masas), Roman Space Telescope
-          (lensing temprano), Euclid (estructura a z ≳ 1).<br><br>
-        </li>
-
-        <li>
-          <span class="prediction-title">Lensing dependiente de historia dinámica, no solo de potencial</span><br><br>
-          <strong>Predicción:</strong> A masa y redshift fijos, el efecto de lente debe correlacionar
-          con indicadores de complejidad dinámica (fusiones, shear ambiental, ensamblaje),
-          no únicamente con la profundidad del potencial gravitatorio.
-          <br><br>
-          <strong>Falsación:</strong> La ausencia de correlación entre señal de lente y proxies
-          dinámicos, una vez controlada la masa, descartaría TIDE.
-          <br><br>
-          <strong>Misión:</strong> Euclid (lensing débil + ambientes), Rubin/LSST
-          (historia de ensamblaje), DESI (contexto dinámico).<br><br>
-        </li>
-
-        <li>
-          <span class="prediction-title">Supresión del efecto tipo “materia oscura” en vacíos cósmicos</span><br><br>
-          <strong>Predicción:</strong> En vacíos y entornos de baja densidad dinámica,
-          la geometría debe estar completamente relajada y la inferencia gravitatoria
-          coincidir con la masa bariónica observada.
-          <br><br>
-          <strong>Falsación:</strong> La detección robusta de exceso gravitatorio en vacíos,
-          no asociado a historia dinámica previa, refutaría el modelo.
-          <br><br>
-          <strong>Misión:</strong> DESI (clasificación ambiental), Euclid (lensing en vacíos),
-          Rubin/LSST (dinámica de galaxias aisladas).<br><br>
-        </li>
-
-        <li>
-          <span class="prediction-title">Gradientes ambientales en medidas locales de expansión</span><br><br>
-          <strong>Predicción:</strong> Las estimaciones locales de expansión deben mostrar
-          residuales correlacionados con ambiente dinámico (voids → filaments → knots),
-          aun a redshift fijo, sin afectar el valor global inferido del CMB.
-          <br><br>
-          <strong>Falsación:</strong> La desaparición del gradiente ambiental con datos
-          cinemáticos independientes invalidaría la interpretación geométrica.
-          <br><br>
-          <strong>Misión:</strong> DESI (reconstrucciones cinemáticas), SKA
-          (peculiar velocities), Roman (distancias estándar).
-          <br><br>
-        </li>
-
-      </ul>
-
-      <p class="stat">
-        Estas predicciones delimitan un régimen observacional claro: si los próximos
-        surveys no confirman dependencias dinámicas y ambientales, TIDE queda falsado.
-      </p>
-    </details>
-  </div>
-</section>
 
 <section>
-  <details class="accordion">
+  <details class="accordion" id="materia-oscura">
     <summary><h2>¿Por qué inferimos materia oscura en las observaciones?</h2></summary>
 
     <p>

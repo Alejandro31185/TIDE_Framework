@@ -131,6 +131,36 @@ h2 {
   margin-top: 2.1rem;
 }
 
+.share-section {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.share-section a {
+  text-decoration: none;
+  color: #f8faff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.share-section a:hover {
+  color: #ffffff;
+}
+
+.share-section svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+}
+
 p {
   max-width: 900px;
   color: var(--muted);
@@ -423,8 +453,11 @@ h1, h2, .highlight, strong {
 }
 
 .cta-small {
-  padding: 0.6rem 1.15rem;
-  font-size: 1rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.95rem;
+  border-width: 1px;
+  border-radius: 12px;
+  color: var(--accent);
 }
 
 .cta-grid {
@@ -639,6 +672,15 @@ footer {
       </div>
 
         </div>
+        <div class="share-section">
+          <a class="share-link" href="#regimen-validez">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/>
+              <path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 1 0 7 7l1.5-1.5"/>
+            </svg>
+            Compartir sección
+          </a>
+        </div>
       </details>
       <details class="accordion" id="mecanismo-geometrico">
         <summary><h2>Mecanismo Geométrico</h2></summary>
@@ -668,6 +710,15 @@ footer {
           no únicamente con masa o densidad instantánea.
         </p>
       </div>
+        </div>
+        <div class="share-section">
+          <a class="share-link" href="#mecanismo-geometrico">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/>
+              <path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 1 0 7 7l1.5-1.5"/>
+            </svg>
+            Compartir sección
+          </a>
         </div>
       </details>
       <details class="accordion" id="evidencia">
@@ -765,6 +816,15 @@ footer {
           que preserva la cosmología temprana estándar y explica las anomalías tardías
           sin introducir nuevos campos ni partículas.
         </p>
+        <div class="share-section">
+          <a class="share-link" href="#evidencia">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/>
+              <path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 1 0 7 7l1.5-1.5"/>
+            </svg>
+            Compartir sección
+          </a>
+        </div>
       </details>
       <details class="accordion" id="predicciones">
         <summary><h2>Predicciones Falsables</h2></summary>
@@ -835,6 +895,15 @@ footer {
           Estas predicciones delimitan un régimen observacional claro: si los próximos
           surveys no confirman dependencias dinámicas y ambientales, TIDE queda falsado.
         </p>
+        <div class="share-section">
+          <a class="share-link" href="#predicciones">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/>
+              <path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 1 0 7 7l1.5-1.5"/>
+            </svg>
+            Compartir sección
+          </a>
+        </div>
       </details>
     </div>
   </section>
@@ -930,36 +999,62 @@ padding:1rem;border-radius:12px;line-height:1.5;color:#dfe9f6;overflow:auto;">
       invisibles; hay una geometría con memoria que aún sostiene la tensión del proceso que la
       originó.
     </p>
+    <div class="share-section">
+      <a class="share-link" href="#materia-oscura">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/>
+          <path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 1 0 7 7l1.5-1.5"/>
+        </svg>
+        Compartir sección
+      </a>
+    </div>
   </details>
 </section>
 
 <section id="documentos">
   <details class="accordion">
     <summary><h2>Documentos y material técnico</h2></summary>
-    <p>
-      Aquí puedes incluir los PDFs principales, anexos técnicos y resultados clave. Si lo deseas,
-      puedo integrarlos en la página con enlaces directos, resúmenes y figuras.
-    </p>
     <ul class="list">
       <li>
-        <span>Resumen ejecutivo</span> —
-        <a class="cta" style="padding:.35rem .9rem" href="01.0_TIDE_Resumen_Ejecutivo.pdf" target="_blank" rel="noopener">
-          PDF
+        <span>TIDE II — Hubble Tension and Dark Energy as an Emergent Residual of Spacetime Torsion</span><br>
+        <a class="cta cta-small" href="evidencia_tide_ii.html" target="_blank" rel="noopener">
+          Ver paper
         </a>
       </li>
       <li>
-        <span>Infografía NoteBook LM </span> —
-        <a class="cta" style="padding:.35rem .9rem" href="02.0_TIDE_Infografía_NoteBook _LM.pdf" target="_blank" rel="noopener">
-          PDF
+        <span>TIDE III — Torsion as an Emergent Dark Sector: Global Consistency and Falsifiable Predictions</span><br>
+        <a class="cta cta-small" href="evidencia_tide_iii.html" target="_blank" rel="noopener">
+          Ver paper
         </a>
       </li>
       <li>
-        <span>Informe Bayesiano (lensing)</span> —
-        <a class="cta" style="padding:.35rem .9rem" href="03.0_TIDE_Informe_Tecnico_Bayesiano.pdf" target="_blank" rel="noopener">
-          PDF
+        <span>TIDE IV — Torsion as Dark Matter: Universal Evidence for a Geometric Dark Sector</span><br>
+        <a class="cta cta-small" href="evidencia_tide_iv.html" target="_blank" rel="noopener">
+          Ver paper
+        </a>
+      </li>
+      <li>
+        <span>TIDE V — A New Geometric Mechanism for Cosmic Anomalies: Torsion from Non-Relaxation</span><br>
+        <a class="cta cta-small" href="evidencia_tide_v.html" target="_blank" rel="noopener">
+          Ver paper
+        </a>
+      </li>
+      <li>
+        <span>TIDE VI — Expansion Is Not Uniform: Environmental Gradients in DESI</span><br>
+        <a class="cta cta-small" href="evidencia_tide_vi.html" target="_blank" rel="noopener">
+          Ver paper
         </a>
       </li>
     </ul>
+    <div class="share-section">
+      <a class="share-link" href="#documentos">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/>
+          <path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 1 0 7 7l1.5-1.5"/>
+        </svg>
+        Compartir sección
+      </a>
+    </div>
   </details>
 </section>
 
@@ -976,7 +1071,9 @@ padding:1rem;border-radius:12px;line-height:1.5;color:#dfe9f6;overflow:auto;">
     history.scrollRestoration = "manual";
   }
   window.addEventListener("load", () => {
-    window.scrollTo(0, 0);
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+    }
   });
 
   const accordionGroups = document.querySelectorAll(".accordion-grid");
@@ -1008,6 +1105,22 @@ padding:1rem;border-radius:12px;line-height:1.5;color:#dfe9f6;overflow:auto;">
     if (!link) return;
     const url = link.getAttribute("href");
     if (!url) return;
+    if (link.classList.contains("share-link")) {
+      event.preventDefault();
+      const shareUrl = new URL(url, window.location.href);
+      const shareText = shareUrl.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(shareText).catch(() => {});
+      } else {
+        const temp = document.createElement("textarea");
+        temp.value = shareText;
+        document.body.appendChild(temp);
+        temp.select();
+        try { document.execCommand("copy"); } catch (e) {}
+        temp.remove();
+      }
+      return;
+    }
     if (url.toLowerCase().endsWith(".pdf")) {
       if (typeof gtag === "function") {
         gtag("event", "file_download", {
@@ -1019,6 +1132,37 @@ padding:1rem;border-radius:12px;line-height:1.5;color:#dfe9f6;overflow:auto;">
       console.log("TIDE Track: Descarga de PDF enviada -> " + url);
     }
   });
+
+  const openSectionFromHash = () => {
+    const hash = window.location.hash;
+    if (!hash) return;
+    const target = document.querySelector(hash);
+    if (!target) return;
+    let details = target.matches("details") ? target : target.closest("details");
+    if (!details && target.querySelector) {
+      details = target.querySelector("details");
+    }
+    if (details) {
+      const group = details.closest(".accordion-grid");
+      if (group) {
+        group.querySelectorAll("details.accordion").forEach((panel) => {
+          if (panel !== details) panel.open = false;
+        });
+      }
+      details.open = true;
+      const summary = details.querySelector("summary");
+      if (summary) {
+        summary.scrollIntoView({ behavior: "smooth", block: "start" });
+        setTimeout(() => window.scrollBy(0, -12), 200);
+      }
+    } else {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(() => window.scrollBy(0, -12), 200);
+    }
+  };
+
+  window.addEventListener("load", openSectionFromHash);
+  window.addEventListener("hashchange", openSectionFromHash);
 </script>
 
 </body>

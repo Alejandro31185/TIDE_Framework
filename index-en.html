@@ -49,9 +49,7 @@ body {
   text-shadow: 0 0 24px rgba(255, 255, 255, 0.06);
   padding-right: clamp(110px, 18vw, 220px);
   scroll-behavior: smooth;
-}
-
-.lang-switcher {
+}.lang-switcher {
   display: inline-flex;
   gap: 0.6rem;
   align-items: center;
@@ -64,9 +62,7 @@ body {
   font-size: 0.95rem;
   letter-spacing: 0.06em;
   line-height: 1.1;
-}
-
-.lang-switcher a {
+}.lang-switcher a {
   text-decoration: none;
   color: var(--text);
   font-size: 0.95rem;
@@ -78,26 +74,18 @@ body {
   padding: 0.2rem 0.45rem;
   border-radius: 999px;
   transition: background 0.2s ease, color 0.2s ease;
-}
-
-.lang-switcher a:hover {
+}.lang-switcher a:hover {
   background: rgba(242, 200, 121, 0.18);
   color: #ffffff;
-}
-
-.lang-flag {
+}.lang-flag {
   font-size: 1.05rem;
   line-height: 1;
-}
-
-.lang-switcher svg {
+}.lang-switcher svg {
   width: 18px;
   height: 18px;
   border-radius: 4px;
   box-shadow: 0 0 6px rgba(0,0,0,0.35);
-}
-
-.lang-switcher a span {
+}.lang-switcher a span {
   line-height: 1;
 }
 
@@ -130,16 +118,12 @@ h1 {
   font-weight: 500;
   letter-spacing: 0.02em;
   margin: 0.15rem 0 0.2rem;
-}
-
-.title-row {
+}.title-row {
   display: flex;
   align-items: baseline;
   gap: 0.7rem;
   flex-wrap: wrap;
-}
-
-.framework {
+}.framework {
   font-size: 1.95rem;
   text-transform: none;
   letter-spacing: 0.28em;
@@ -150,9 +134,7 @@ h1 {
   color: transparent;
   text-shadow: 0 0 18px rgba(255, 216, 140, 0.35);
   font-family: "Space Grotesk", system-ui, sans-serif;
-}
-
-.hero-gif {
+}.hero-gif {
   position: absolute;
   right: 3.2rem;
   top: 0.6rem;
@@ -165,9 +147,7 @@ h1 {
   transform: rotate(215deg);
   opacity: 0.4;
   filter: blur(0.6px) saturate(1.1);
-}
-
-.hero-gif img {
+}.hero-gif img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -179,15 +159,11 @@ h2 {
   font-weight: 500;
   font-size: clamp(1.4rem, 2.2vw, 2rem);
   margin-top: 2.1rem;
-}
-
-.share-section {
+}.share-section {
   margin-top: 1.2rem;
   display: flex;
   justify-content: center;
-}
-
-.share-section a {
+}.share-section a {
   text-decoration: none;
   color: #f8faff;
   font-size: 1.15rem;
@@ -197,13 +173,9 @@ h2 {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-}
-
-.share-section a:hover {
+}.share-section a:hover {
   color: #ffffff;
-}
-
-.share-section svg {
+}.share-section svg {
   width: 18px;
   height: 18px;
   stroke: currentColor;
@@ -221,50 +193,36 @@ section {
   margin: auto;
   padding: 2rem 1.4rem;
   border-top: none;
-}
-
-.tight-section {
+}.tight-section {
   padding-top: 1.4rem;
   padding-bottom: 1.2rem;
-}
-
-.tight-section + .tight-section {
+}.tight-section +.tight-section {
   padding-top: 0.8rem;
 }
 
 strong {
   color: var(--text);
-}
-
-.highlight {
+}.highlight {
   color: var(--text);
   font-weight: 500;
-}
-
-.tagline {
+}.tagline {
   font-size: 1.4rem;
   color: var(--accent);
   max-width: 820px;
-}
-
-.hero-lead {
+}.hero-lead {
   font-size: 1.2rem;
   max-width: 950px;
-}
-
-.hero-title {
+}.hero-title {
   margin-top: 0;
 }
 
-h1, h2, .highlight, strong {
+h1, h2,.highlight, strong {
   background: linear-gradient(90deg, #f8faff, #d7e0ee 30%, #ffffff 55%, #c7d1e1 80%, #f8faff);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-shadow: 0 0 32px rgba(255, 255, 255, 0.18);
-}
-
-.pill {
+}.pill {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -276,38 +234,26 @@ h1, h2, .highlight, strong {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   line-height: 1.1;
-}
-
-.pill-row {
+}.pill-row {
   display: inline-flex;
   align-items: center;
   gap: 0.85rem;
-}
-
-.grid {
+}.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.8rem;
   margin-top: 2rem;
-}
-
-.accordion summary {
+}.accordion summary {
   list-style: none;
   cursor: pointer;
-}
-
-.accordion summary::-webkit-details-marker {
+}.accordion summary::-webkit-details-marker {
   display: none;
-}
-
-.accordion summary h2 {
+}.accordion summary h2 {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
   line-height: 1.1;
-}
-
-.accordion summary h2::after {
+}.accordion summary h2::after {
   content: "\25BC";
   font-size: 1.55rem;
   background: linear-gradient(90deg, #f3d48a, #ffdca3 45%, #e7bf6a 80%);
@@ -316,22 +262,16 @@ h1, h2, .highlight, strong {
   color: transparent;
   text-shadow: 0 0 18px rgba(255, 216, 140, 0.35);
   transform: translateY(0);
-}
-
-.accordion[open] summary h2::after {
+}.accordion[open] summary h2::after {
   content: "\25B2";
-}
-
-.accordion summary {
+}.accordion summary {
   border: 1px solid transparent;
   border-radius: 999px;
   padding: 0.1rem 0.45rem;
   display: flex;
   justify-content: center;
   transition: border-color 0.2s ease, background 0.2s ease;
-}
-
-.accordion summary:hover {
+}.accordion summary:hover {
   border-color: rgba(242, 200, 121, 0.7);
   background: linear-gradient(120deg, rgba(242, 200, 121, 0.15), rgba(125, 199, 255, 0.08));
 }
@@ -363,38 +303,28 @@ h1, h2, .highlight, strong {
 #documentos summary:hover h2 {
   color: var(--accent);
   transform: scale(1.03);
-}
-
-.accordion-grid {
+}.accordion-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.4rem;
   align-items: start;
-}
-
-.accordion-grid .accordion {
+}.accordion-grid.accordion {
   border-top: 1px solid var(--line);
   padding-top: 1rem;
-}
-
-.accordion-grid .accordion[open] {
+}.accordion-grid.accordion[open] {
   grid-column: 1 / -1;
 }
 
-@media (max-width: 900px) {
-  .accordion-grid {
+@media (max-width: 900px) {.accordion-grid {
     grid-template-columns: 1fr;
   }
-}
-.card {
+}.card {
   background: linear-gradient(160deg, var(--panel), var(--panel-2));
   padding: 1.9rem 1.7rem;
   border-radius: var(--radius);
   border: 1px solid rgba(125, 199, 255, 0.12);
   box-shadow: 0 20px 45px var(--shadow);
-}
-
-.figure-card {
+}.figure-card {
   width: calc(100% - 2.6rem);
   max-width: 1120px;
   margin: 0.6rem auto;
@@ -405,33 +335,25 @@ h1, h2, .highlight, strong {
   box-shadow: none;
   border-radius: 0;
   position: relative;
-}
-
-.figure-wrap {
+}.figure-wrap {
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 1.3rem;
 }
 
-@media (max-width: 720px) {
-  .figure-card {
+@media (max-width: 720px) {.figure-card {
     width: 100%;
-  }
-  .figure-wrap {
+  }.figure-wrap {
     padding: 0 1rem;
   }
-}
-
-.figure-card img {
+}.figure-card img {
   width: 100%;
   display: block;
   border-radius: 0;
   max-height: 300px;
   object-fit: cover;
   object-position: center;
-}
-
-.figure-label {
+}.figure-label {
   position: absolute;
   top: 12px;
   padding: 0.3rem 0.75rem;
@@ -443,17 +365,11 @@ h1, h2, .highlight, strong {
   color: #f7e7bf;
   text-shadow: 0 0 14px rgba(255, 216, 140, 0.35);
   backdrop-filter: blur(4px);
-}
-
-.figure-label.left {
+}.figure-label.left {
   left: 10%;
-}
-
-.figure-label.right {
+}.figure-label.right {
   right: 10%;
-}
-
-.hero-card {
+}.hero-card {
   margin-top: 2.5rem;
   padding: 1.05rem 2rem 1.3rem;
   background: linear-gradient(145deg, rgba(242, 200, 121, 0.08), rgba(125, 199, 255, 0.08));
@@ -461,39 +377,25 @@ h1, h2, .highlight, strong {
   border: 1px solid rgba(242, 200, 121, 0.16);
   box-shadow: 0 24px 50px var(--shadow);
   font-size: 0.81em;
-}
-
-.list {
+}.list {
   list-style: none;
   padding: 0;
   margin: 1.5rem 0 0;
-}
-
-.list li {
+}.list li {
   padding: 0.7rem 0;
   border-bottom: 1px dashed rgba(125, 199, 255, 0.15);
   color: var(--muted);
-}
-
-.list li span {
+}.list li span {
   color: var(--text);
   font-weight: 500;
-}
-
-.prediction-list li {
+}.prediction-list li {
   position: relative;
   padding-left: 1.4rem;
-}
-
-.prediction-list {
+}.prediction-list {
   counter-reset: alpha;
-}
-
-.prediction-list li {
+}.prediction-list li {
   counter-increment: alpha;
-}
-
-.prediction-list li::before {
+}.prediction-list li::before {
   content: counter(alpha, upper-alpha) ".";
   position: absolute;
   left: 0;
@@ -505,41 +407,29 @@ h1, h2, .highlight, strong {
   font-size: 1.4rem;
   line-height: 1.1;
   text-shadow: 0 0 14px rgba(255, 216, 140, 0.35);
-}
-
-.prediction-title {
+}.prediction-title {
   color: #ffffff;
   font-weight: 700;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
-}
-
-.tight {
+}.tight {
   margin-top: 0.2rem;
-}
-
-.stat {
+}.stat {
   font-size: 0.98rem;
   color: var(--muted);
   border-left: 2px solid rgba(242, 200, 121, 0.5);
   padding-left: 1rem;
   margin: 0.8rem 0 0;
-}
-
-.mechanism {
+}.mechanism {
   color: #ffffff;
   font-weight: 700;
   text-shadow: 0 0 30px rgba(255, 255, 255, 0.38);
   letter-spacing: 0.02em;
-}
-
-.cta-row {
+}.cta-row {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 2rem;
-}
-
-.cta {
+}.cta {
   text-decoration: none;
   color: var(--text);
   padding: 0.9rem 1.6rem;
@@ -549,42 +439,30 @@ h1, h2, .highlight, strong {
   box-shadow: 0 10px 24px rgba(5, 9, 14, 0.35), inset 0 0 0 1px rgba(242, 200, 121, 0.08);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   letter-spacing: 0.02em;
-}
-
-.cta-small {
+}.cta-small {
   padding: 0.35rem 0.85rem;
   font-size: 0.95rem;
   border-width: 1px;
   border-radius: 12px;
   color: var(--accent);
-}
-
-.cta-grid {
+}.cta-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.9rem 1.1rem;
   justify-items: center;
   margin-top: 2rem;
-}
-
-.cta-grid .cta {
+}.cta-grid.cta {
   width: 100%;
   text-align: center;
-}
-
-.cta-grid .cta-center {
+}.cta-grid.cta-center {
   grid-column: 1 / -1;
   justify-self: center;
   max-width: 460px;
-}
-
-.test-title {
+}.test-title {
   color: #ffffff;
   font-weight: 700;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
-}
-
-.cta:hover {
+}.cta:hover {
   transform: translateY(-2px);
   border-color: rgba(242, 200, 121, 0.7);
   box-shadow: 0 14px 32px rgba(5, 9, 14, 0.45), inset 0 0 0 1px rgba(242, 200, 121, 0.2);
@@ -597,9 +475,7 @@ footer {
   font-size: 0.9rem;
   color: var(--muted);
   border-top: 1px solid var(--line);
-}
-
-.home-link {
+}.home-link {
   position: fixed;
   left: 18px;
   bottom: 18px;
@@ -613,21 +489,15 @@ footer {
   box-shadow: 0 12px 28px rgba(5, 9, 14, 0.45);
   z-index: 10;
   text-decoration: none;
-}
-
-.home-link svg {
+}.home-link svg {
   width: 22px;
   height: 22px;
   fill: url(#homeGradient);
   filter: drop-shadow(0 0 8px rgba(255, 216, 140, 0.35));
-}
-
-.home-link:hover {
+}.home-link:hover {
   border-color: rgba(242, 200, 121, 0.9);
   background: rgba(12, 16, 22, 0.85);
-}
-
-.video-sidebar {
+}.video-sidebar {
   position: fixed;
   top: 0;
   right: 0;
@@ -636,9 +506,7 @@ footer {
   z-index: 0;
   overflow: hidden;
   border-left: 1px solid rgba(155, 199, 255, 0.18);
-}
-
-.video-sidebar::after {
+}.video-sidebar::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -646,9 +514,7 @@ footer {
     linear-gradient(180deg, rgba(11, 15, 20, 0.18), rgba(11, 15, 20, 0.38)),
     radial-gradient(60% 40% at 50% 20%, rgba(242, 200, 121, 0.12), transparent 70%);
   pointer-events: none;
-}
-
-.video-sidebar video {
+}.video-sidebar video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -659,20 +525,16 @@ footer {
 @media (max-width: 720px) {
   header {
     padding-top: 2.6rem;
-  }
-  .hero-card {
+  }.hero-card {
     padding: 1.6rem;
-  }
-  .cta-row {
+  }.cta-row {
     flex-direction: column;
   }
   body {
     padding-right: 0;
-  }
-  .video-sidebar {
+  }.video-sidebar {
     display: none;
-  }
-  .hero-gif {
+  }.hero-gif {
     position: static;
     margin: 1.2rem auto 0;
     transform: rotate(0deg);
@@ -727,7 +589,7 @@ footer {
     <span class="highlight">effective geometric response</span> when
     <span class="highlight">the spacetime connection does not relax instantaneously to Levi-Civita</span>,
     giving rise to a stabilized effective torsion without introducing new fields or degrees of freedom.
-  </p><br>
+  </p>
   <p class="stat">
     <span class="mechanism">Note:</span> TIDE is not an alternative to &Lambda;CDM, but a geometric mechanism that can explain why &Lambda;CDM works phenomenologically in the late universe.
   </p>
@@ -1064,7 +926,7 @@ padding:0.6rem;border-radius:8px;line-height:1.5;color:#dfe9f6;overflow:auto;">
       The inference of &ldquo;dark matter&rdquo; is the result of an a priori geometric restriction:
       assuming that the spacetime connection is always Levi-Civita (symmetric and torsion-free).
       Under this premise, any curvature in excess of that produced by baryons is necessarily translated
-      into an additional mass term in the energy&ndash;momentum tensor \left(T_{\mu\nu}\right).
+      into an additional mass term in the energy&ndash;momentum tensor.
     </p>
 
     <p>
@@ -1267,6 +1129,7 @@ padding:0.6rem;border-radius:8px;line-height:1.5;color:#dfe9f6;overflow:auto;">
 
 </body>
 </html>
+
 
 
 
